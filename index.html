@@ -1,19 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Document</title>
-    </head>
-    <body>
-        <audio src="Bell Sound Effect.mp3" id="audio"></audio>
-        <video id="video"></video>
-        
-        <canvas id="canvas" ></canvas>
-        
-        <script src="https://cdn.jsdelivr.net/npm/handtrackjs@latest/dist/handtrack.min.js"></script>
-        <script src="app.js"></script>
-    </body>
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Hand Track </title>
+  <link rel="stylesheet" href="https://unpkg.com/carbon-components@latest/css/carbon-components.css" />
+  <link rel="stylesheet" href="css/track.css">
+  <link rel="stylesheet" href="css/bulma.min.css">
+</head>
+
+<body class="bx--body p20">
+  <!-- <img id="img" src="hand.jpg"/>  -->
+  <audio src="sound/synthesize.mp3" id="audio"></audio>
+  <div class="container">
+  <div class="p20">
+    Track hand gestures in real time
+  </div>
+  <div class="mb10">
+      <div class="buttons">
+    <button  id="trackbutton" class="button is-success" type="button" disabled>
+      Toggle Video
+    </button>
+   
+    <button id="updatenote" class="updatenote button is-loading"> loading model ..</button>
+  </div>
+  </div>
+  <video class="videobox canvasbox" autoplay="autoplay" id="myvideo"></video>
+  <canvas id="canvas" class="border canvasbox"></canvas>
+  <div class="mt10">
+    <img src="images/1.jpg" class="canvasbox  hidden" id="handimage" alt="">
+
+  </div>
+</div>
+
+  <script src="https://unpkg.com/carbon-components@latest/scripts/carbon-components.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/handtrackjs@0.0.13/dist/handtrack.min.js"> </script> -->
+  <script src="lib/handtrack.min.js"> </script>
+  <script src="js/index.js"></script>
+</body>
 
 </html>
