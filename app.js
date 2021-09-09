@@ -6,7 +6,7 @@ const modelParams = {
     scoreThreshold: 0.95,
 }
 
-
+//browser polyfill
 navigator.getUserMedia =
     navigator.getUserMedia ||
     navigator.webkitGetUserMedia ||

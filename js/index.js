@@ -21,6 +21,13 @@ const modelParams = {
   scoreThreshold: 0.6, // confidence threshold for predictions.
 };
 
+var setCanvasSize = function() {
+  canvas.width = window.innerWidth/2;
+  canvas.height = window.innerHeight/2;
+  }
+
+  setCanvasSize();
+
 function startVideo() {
   handTrack.startVideo(video).then(function (status) {
     console.log("video started", status);
